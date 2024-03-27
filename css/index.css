@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #F1F1F5;
+    width: 100%;
+    position: fixed;
+    z-index: 800;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px;
+    align-items: center;
+}
+
+.logo{
+    text-decoration: none;
+    color: #545BFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.logo span{
+    color: #000000;
+    font-size: 1.2em;
+}
+
+.navigation{
+    margin: auto;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding-left: 20px;
+    transition: .25%;
+}
+
+.menu-icon {
+    color: #545BFF;
+    cursor: pointer;
+    display: none;
+  }
+
+.navigation a:hover{
+    color: #545BFF;
+    font-weight: 700;
+}
+
+#darkMod-icon{
+    font-size: 25px;
+    color: #545BFF;
+    cursor: pointer;
+}
+
+section{
+    padding: 55px 100px;
+}
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.fade-in.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Startseite */ 
+.main{
+    min-height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.block-img{
+    width: 400px;
+    height: 400px;
+    min-height: 300px;
+    min-width: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url(../img/ikram.png);
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 5px 5px 5px #545BFF;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+.main h2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.main h2 span{
+    color: #545BFF;
+}
+
+.main p{
+    font-size: 1,4em;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.home-img{
+    position: relative;
+}
+
+.img-box{
+    text-align: center;
+}
+
+@keyframes animate {
+    0%, 100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.main-btn{
+    color: #fff;
+    background-color: #545BFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.8000em 2.1000em;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-right: 15px;
+    transition: 0.7s ease;
+}
+
+.main-btn-video{
+    color: #fff;
+    background-color: #545BFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover, .main-btn-video:hover{
+    color: #545BFF;
+    background-color: #ffff;
+    font-weight: 600;
+    border: solid #c6c7f5 1px;
+    box-shadow: 0 0 20px 0 #8a8dec;
+    transform: scale(1.0);
+}
+
+.sociale-ntz-icons a{
+    color: #545BFF;
+}
+
+.sociale-ntz-icons {
+    display: flex;
+}
+
+.sociale-ntz-icons .icon{
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.05);
+    margin: 0 8px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon:after {
+    content: '';
+    width: 35px;
+    height: 35px;
+    z-index: -1;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background: linear-gradient(to bottom, #d3d5f8, #1c209e);
+    transition: 0.5s;
+}
+
+.sociale-ntz-icons .icon:hover {
+    color: #fff;
+}
+
+a:hover::after {
+    bottom: 0;
+}
+
+/* Über-mich */ 
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.about-us {
+    background-color: #f5f5f5;
+}
+
+.about-us .container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ubermich-img img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubermich-img{
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.about-us .description {
+    max-width: 60%;
+}
+
+.about-us .content h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.about-us h2 span, .arbeit h2 span{
+    color: #545BFF;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about-us p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.about-us span{
+    color: #f5f5f5;
+}
+
+.about-us span{
+    color: #f5f5f5;
+}
+
+/* Sprache */
+.fertigkeiten{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.fertigkeiten .fertig1, .fertigkeiten .fertig2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.personliche-sprachen, .personliche-fertigkeiten{
+    width: 100%;
+    display: grid;
+    grid-column-gap: 2px;
+}
+
+/*
+.progress-bar{
+    margin-bottom: 20px;
+
+                    <img src="img/33.jpg" style="width:100%" class="effet">
+
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background-color: #545BFF;
+    box-shadow: 0px 0px 9px 0px #545BFF;
+    border-radius: 50px;
+    overflow: hidden;
+}
+*/
+
+.skill span{
+    font-size: 15px;
+    color: #555;
+    font-weight: 600;
+}
+
+.f1 .img-fertig{
+    height: 15px;
+    width: 15px;
+}
+
+.f1{
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;    
+    padding-top: 10px;
+}
+
+/* Animation for the progress */
+@keyframes progressBarAnimation {
+    from { width: 0; }
+}
+
+/* Fähigkeiten */ 
+
+.titel{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    color: #333;
+}
+
+.card{ 
+    background-color: #ffffff;
+    width: 18em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
+    text-align: center;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);    
+    border: solid #545BFF 1px;
+    box-shadow: 0 0 20px 0 #8a8dec;
+}
+
+.info{
+    text-align: center;
+}
+
+.info h3{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin: 10px;
+}
+
+.sociale-ntz-icons img{
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.iconn{
+    color: #545BFF;
+}
+
+/* Karriere */
+
+.Karriere {
+    padding-right: calc(10% - 30px);
+}
+
+.Karriere .row{
+    width: 100%;
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.col .titel-Karriere{
+    color: #444;    
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px 0px 15px 20px;
+}
+
+.col .glb{
+    padding: 0px 30px;
+    border-left: 2px solid #545BFF;
+}
+
+.col .contenets .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #545BFF;
+    border-radius: 4%;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+.col .contenets .box:hover{
+    box-shadow: 0px 3px 12px 0px #545BFF;
+    border: 1px solid #545BFF;
+    background-color: #dfe0fb;
+}
+
+.col .contenets .box::before{
+    content:'';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    right: calc(100% + 25px);
+    top: -1px;
+    background-color: #545BFF;
+    border: 2px solid #545BFF;
+}
+
+.box .year{
+    position: relative;
+    color: #545BFF;   
+    font-size: 14px;
+
+}
+
+.box h3{
+    font-size: 17px;
+    padding: 10px 0px 6px;
+    color: #444;
+}
+
+.box p{
+    line-height: 1.2;
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+}
+
+.praktkum{
+    padding-left: 5%;
+    font-size: 14px;
+}
+
+.praktkum .ft{
+    margin-left: 10%;
+    color: black;
+    font-weight: 500;
+    list-style: circle;
+}
+
+@media (max-width: 768px){
+    .Karriere .row{
+        grid-template-columns: 1fr;
+    }
+    .row .col:nth-child(2){
+        margin-top: 30px;
+    }
+}
+
+/* Projekte */
+
+.fillter-btn{
+    margin: 2rem;
+    text-align: center;
+}
+
+.fillter-btn .btn{
+    background: none;    
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 1.3rem;
+    color: #333;
+}
+
+.fillter-btn .btn:hover{
+    color: #545BFF;
+    font-weight: 700;
+    border-top: 2px solid #545BFF;
+    border-bottom: 2px solid #545BFF;
+    padding: 1px;
+}
+
+.Projekte-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+    gap: 2rem;
+    /*min-height: 50rem;*/
+    transition: 0.7s ease;
+}
+
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #333;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid #ccc;
+    box-shadow: #ccc;
+}
+
+.port-box:hover{
+    transform: scale(1.1);    
+    border: solid #ccc 1px;
+    box-shadow: 0 0 30px 0 #545BFF;
+}
+
+.port-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.port-img img{
+    opacity: .5s;
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+}
+
+.port-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,.2), #272dd6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 2rem;
+}
+
+.port-box:hover .port-img{
+    transform: scale(1.1);
+}
+
+.port-box:hover .port-content{
+    opacity: 1;
+}
+
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    font-weight: 700;
+}
+
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #545BFF;
+    outline: 2px solid #fff;
+}
+
+.port-content a i{
+    color: #545BFF;
+}
+
+/* in der Arbeit*/
+
+.arbeit .content p{
+    padding-bottom: 20px;
+}
+
+.arbeit .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;    
+    background-color: #ccc;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 35%;
+    padding: 0 5px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.7s ease;
+}
+
+.column img:hover {
+    transform: scale(1);    
+    box-shadow: 0 0 20px 0 #000000;
+}
+
+/* Kontakt */
+
+.kontakt-form{
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+    padding: 25px;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 20px 0 #8a8dec; 
+    height: 25rem;
+    background-color: #fff;
+}
+
+.kontakt-form input, .kontakt-form textarea {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    padding: 15px;
+    border-radius: 0.4rem;
+    border-bottom: 1px solid #545BFF;
+    background-color: #fff;
+}
+
+.kontakt-form input:hover, .kontakt-form textarea:hover {
+    border: solid #545BFF 1px;
+    box-shadow: 0 0 20px 0 #8a8dec; 
+}
+
+.kontakt-form .schicken-btn{
+    color: #ffff;
+    width: 150px;
+    cursor: pointer;
+    background-color: #545BFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.8000em 2.1000em;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    transition: 0.7s ease;
+}
+
+.kontakt-form .schicken-btn:hover{
+    color: #545BFF;
+    background-color: #ffff;
+    font-weight: 600;
+    border: solid #545BFF 1px;
+    box-shadow: 0 0 20px 0 #8a8dec;
+    transform: scale(1.0);
+}
+/*
+.blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(180deg, #545BFF, #784ba8 100%);
+    mix-blend-mode: color-dodge;
+    animation: move 25s infinite alternate;
+    transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+  }
+    
+  @keyframes move {
+    from {
+      transform: translate(-100px, -50px) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+  
+    to {
+      transform: translate(500px, 100px) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+  */
+
+/* Footer*/
+
+.footer{
+    background-color: #f5f5f5;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .sociale-ntz-icons a:hover{
+    color: #545BFF;
+}
+
+.footer .sociale-ntz-icons a{
+   font-size: 15px;
+   padding-right: 5px;
+}
+
+.footer-title{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.footer-title span{
+    color: #545BFF;
+}
+
+@media screen and (max-width: 768px) {
+    .header .navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 50%;
+        background-color: #8a8dec;
+        z-index: 1;
+    }
+
+    .header .navigation.responsive {
+        display: grid;
+    }
+
+    .header .navigation a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .header .menu-icon {
+        display: none;
+    }
+
+    .header .navigation {
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .navigation a{
+        display: grid;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-icon .fa-bars {
+        font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+    }
+
+    .main {
+        padding-top: 90px;
+        display: grid;
+    }
+    
+    .block-img {
+        height: 260px;/* Ajustez la hauteur pour les écrans plus petits */
+        width: 200px;
+        height: 200px;
+        min-height: 300px;
+        min-width: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 10px;
+    }
+    
+    .block-img {
+        height: 150px; /* Ajustez la hauteur pour les écrans encore plus petits */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: auto;
+    }
+
+    .content .container {
+        display: grid;
+        text-align: left;
+    }
+
+    .ubermich-img img {
+        align-items: center;
+        height: 200px; /* Ajustez la hauteur pour les écrans encore plus petits */
+        width: 210px;
+        margin-left: 35%;
+        margin-top: 30px;
+    }
+
+    .description{
+        align-items: center;
+        height: 270px; /* Ajustez la hauteur pour les écrans encore plus petits */
+        width: 700px;
+        margin-left: 20%;
+        margin-bottom: 30px;
+    }
+
+    .fertigkeiten{
+        display: grid;
+    }
+
+    .fertigkeiten .fertig1, .fertigkeiten .fertig2{
+        margin-bottom: 10px;        
+    }
+
+    .about-us p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .about-us {
+        padding-bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content .container  {
+        padding: 10px;
+    }
+    
+    .ubermich-img {
+        align-items: center;
+        height: 230px; /* Ajustez la hauteur pour les écrans encore plus petits */
+        width: 680px;
+        margin-left: 10%;
+        margin-bottom: 20px;   
+    }
+
+    .about-us .description {
+        max-width: 20%;
+    }
+
+    .about-us p {
+        font-size: 13px;
+        font-weight: 350;
+    }
+}
