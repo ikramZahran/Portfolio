@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lien css pour les icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Portfolio-zahran ikram</title>
+</head>
+<body>
+
+    <!--menu-->
+    <header  class="header">
+        <a href="#" class="logo">ZAHRAN<span>IK</span></a>
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <nav class="navigation" id="navigationB">
+            <a href="#Startseite">Startseite</a>
+            <a href="#über-mich">Über mich</a>
+            <a href="#Karriere">Karriere</a>
+            <a href="#Fähigkeiten">Fähigkeiten</a>
+            <a href="#Projekte">Projekte</a>
+            <a href="#arbeit">In Arbeit</a>
+            <a href="#Kontakt">Kontakt</a>
+        </nav>
+
+        <script>
+            function onMenuClick() {
+                var navigation = document.getElementById("navigationB");
+                if (navigation.style.display === "block") {
+                    navigation.style.display = "none";
+                } else {
+                    navigation.style.display = "block";
+                }
+            }
+
+            // Fonction pour masquer le menu après avoir cliqué sur un élément du menu
+            document.querySelectorAll(".navigation a").forEach(function(element) {
+                element.addEventListener("click", function() {
+                    if (window.innerWidth <= 800) {
+                        var navigation = document.getElementById("navigationB");
+                        navigation.style.display = "none";
+                    }
+                });
+            });
+        </script>
+        <!--  <div class="bx bx-moon" id="darkMod-icon"><i class="fa-solid fa-moon"></i></div>  -->
+    </header>
+
+
+    <!--startseite-->
+    <section class="main" id="Startseite">
+        <div class="introduction">
+            <p class="fade-in">Guten Tag, ich bin</p>
+            <h2 class="fade-in">Zahran Ikram <span id="text"></span></h2>
+            <p class="fade-in">Ich verfüge über unterschiedliche Fähigkeiten in der Web- und Anwendungsentwicklung.</p>
+            <a href="#projte" class="main-btn">Bewerbung</a>
+            <!-- 
+            <a href="#projte" class="main-btn">Video abspielen</a>
+            <a href="#" class="main-btn-video"><i class="fa-solid fa-play"></i></a>
+            -->
+            <div class="sociale-ntz-icons">
+                <a href="https://www.linkedin.com/in/zahran-ikram-0b8232224/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ikramZahran" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://mail.google.com/mail/u/1/#inbox" class="icon"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.youtube.com/@hoffnungen.zahran" class="icon"><i class="fa-brands fa-youtube"></i></a>
+                <a href="Https://wa.me/+212674613321" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+        <script>
+            var typed = new Typed("#text", 
+                {strings: ["Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler", "Ersteller motivierender Inhalte", "Full-Stack-Entwickler"],
+                typeSpeed:50
+            })
+        </script>                       
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const elements = document.querySelectorAll(".fade-in");
+                function checkElementsInView() {
+                    elements.forEach(function (element) {
+                        const rect = element.getBoundingClientRect();
+                        const isInView = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+                        if (isInView) {
+                            element.classList.add("in-view");
+                        }
+                    });
+                }
+                window.addEventListener("scroll", checkElementsInView);
+                window.addEventListener("resize", checkElementsInView);
+                checkElementsInView();
+            });
+        </script>
+        <div class="block-img"></div>              
+    </section>
+
+
+    <!--über-mich-->
+    <section class="about-us" id="über-mich">
+        <div class="content">
+            <h2>Über <span> &nbsp; mich</span></h2>
+            <div class="container">
+                <div class="ubermich-img">
+                    <img src="img/ikram (2).jpg" alt="ikram zahran">
+                </div>
+
+                <div class="description">
+                    <p class="fade-in">
+                        <span>--</span> Ich bin Zahran Ikram, 22 Jahre alt, und ich komme aus Marokko. Im Jahr 2022 habe ich erfolgreich meine Lizenz in Informationssystemen und Softwaretechnik an der Fakultät für Wissenschaften an der Fes abgeschlossen. 
+                    </p>
+                    <p class="fade-in">
+                        <span>--</span> 
+                        Aktuell bin ich auf der Suche nach einer Ausbildung im Bereich Anwendungsentwicklung in Deutschland, 
+                        um meine beruflichen Erfolge zu fördern, meine Fähigkeiten auf allen Ebenen weiterzuentwickeln und mich
+                        neuen Herausforderungen zu stellen.
+                    </p>
+                    
+                    <div class="fertigkeiten">
+                        <div class="fertig2">
+                            <h3 class="titel-Karriere">Soft Skill</h3>
+                            <div class="personliche-fertigkeiten">                        
+                                <div class="box">
+                                    <div class="f1"><img src="img/Neugierde.png" class="img-fertig" alt="Adaptation">&nbsp;&nbsp; Neugierde und Lernbereitschaft</div>
+                                </div>
+    
+                                <div class="box">
+                                    <div class="f1"><img src="img/Gestalterische Fähigkeiten.png" class="img-fertig" alt="Infoaustausch">&nbsp;&nbsp; Gestalterische Fähigkeiten</div>
+                                </div>
+    
+                                <div class="box">
+                                    <div class="f1"><img src="img/Analytisches Denken.png" class="img-fertig" alt="Groupe">&nbsp;&nbsp; Analytisches Denken</div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="f1"><img src="img/group.png" class="img-fertig" alt="Groupe">&nbsp;&nbsp; Teamgeist</div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="f1"><img src="img/Passion.png" class="img-fertig" alt="Groupe">&nbsp;&nbsp; Leidenschaft</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fertig1">
+                            <h3 class="titel-Karriere">Sprachen</h3>
+                            <div class="personliche-sprachen"> 
+                                <div class=skill>
+                                    <span>Deutsch: B2</span>
+                                </div>  
+                                   
+                                <div class=skill>
+                                    <span>Arabisch: Muttersprache</span>
+                               </div>
+                               
+                               <div class=skill>
+                                    <span>Französisch: Fortgeschrittene</span> 
+                                </div>
+                                
+                                <div class=skill>
+                                    <span>Englisch: Grundkenntnisse</span>
+                                </div>
+
+                                <div class=skill->
+                                    <span>---</span>
+                                </div>
+
+                                <div class=skill->
+                                    <span>---</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      <script>
+          function animateProgressBar() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach((progressBar) => {
+                const value = progressBar.getAttribute('data-value');
+                progressBar.style.width = value + '%';
+                progressBar.style.animation = 'progressBarAnimation 1s ease-in-out';
+            });
+        }
+        animateProgressBar();
+      </script>        
+    </section>
+
+    <!--Karriere-->
+    <section class="Karriere" id="Karriere">
+        <h2 class="titel">Karriere</h2>
+        <div class="content">
+            <div class="row">
+
+                <div class="col">
+                    <h2 class="titel-Karriere">Studium</h2>
+                    <div class="glb">
+                    
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> Februar 2024</div>
+                                <h3>B2-Zertifikat</h3>
+                                <ul class="praktkum">
+                                    <li>Deutsches Sprachzertifikat bei ÖSD.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> 2021 - 2022</div>
+                                <h3>Professionnalle Lizenz</h3>
+                                <p class="fade-in">
+                                    <ul class="praktkum">
+                                        <li>Bei Universität Sidi Mohamed Ben Abdellah in FES.</li>
+                                        <li>Informationssystem und Softwaretechnik.</li>
+                                        <li>Bewertung : Gut.</li>
+                                    </ul>                                
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> 2019 - 2021</div>
+                                <h3>Ausbildung</h3>
+                                <p class="fade-in">
+                                    <ul class="praktkum">
+                                        <li>Bei BTS in Fes.</li>
+                                        <li>Entwicklung von Informationssystemen.</li>
+                                        <li>Bewertung : Sehr Gut.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> 22.06.2019</div>
+                                <h3>Abschluss Abitur</h3>
+                                <p class="fade-in">
+                                    <ul class="praktkum">
+                                        <li>Bei Qualifizierendes Gymnasium Takaddoum in FES.</li>
+                                        <li>Internationaler Studiengang für Physikwissenschaften.</li>
+                                        <li>Bewertung : Gut.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+
+                <div class="col">
+                    <h2 class="titel-Karriere">Berufserfahrung</h2>
+                    <div class="glb">
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> 01 April 2022 - 01 Juli 2022</div>
+                                <h3>UML-Modellierung.</h3>
+                                <p class="fade-in">
+                                    <ul class="praktkum">
+                                        <li>Praktikum bei der Firma Innov DS in FES.</li>
+                                        <li>Desktop-Anwendung zur Modellierung-UML : 
+                                            <li class="ft">C#.</li>
+                                        </li>
+                                        <li>Eine repräsentative Website für die UML-Modellierungsanwendung :
+                                            <li class="ft">WordPress</li>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contenets">
+                            <div class="box">
+                                <div class="year"><i class="fa-regular fa-calendar-days"></i> 24 Mai 2021 - 21 Juni 2021</div>
+                                <h3>E-Commerce-Website für den Verkauf von Unternehmen Produkten</h3>
+                                <p class="fade-in">
+                                    <ul class="praktkum">
+                                        <li>Praktikum bei der Firma J2HB in FES.</li>
+                                        <li>WordPress</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <!--Fähigkeiten-->
+    <section class="cards" id="Fähigkeiten">
+        <h2 class="titel">Fähigkeiten</h2>
+        <div class="content">
+            <div class="card">
+                <div class="iconn"><i class="fa-solid fa-database"></i></div>
+                <div class="info">
+                    <h3>Datenbank</h3>
+                    <div class="sociale-ntz-icons">
+                        <img src="img/mysql.png" class="img-main" alt="mysql">
+                        <img src="img/sqlserver.png" class="img-main" alt="sqlserver">
+                        <img src="img/oracle.png" class="img-main" alt="oracle">
+                        <img src="img/MS-Access.png" class="img-main" alt="MS-Access">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="iconn"><i class="fa-solid fa-file-code"></i></div>
+                <div class="info">
+                    <h3>Web-Technologie</h3>
+                    <div class="sociale-ntz-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-html5"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-css3-alt"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-js"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-php"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="iconn"><i class="fa-solid fa-code"></i></div>
+                <div class="info">
+                    <h3>Programmiersprachen</h3>
+                    <div class="sociale-ntz-icons">
+                        <a href="#" class="icon"><i class="fa-solid fa-c"></i></a>
+                        <a href="#" class="icon"><i class="fa-solid fa-c"></i>#</a>
+                        <a href="#" class="icon"><i class="fa-brands fa-java"></i></a>
+                        <a href="#" class="icon">VB</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="iconn"><i class="fa-solid fa-diagram-project"></i></div>
+                <div class="info">
+                    <h3>Conception</h3>
+                    <div class="sociale-ntz-icons">
+                        <img src="img/uml2.png" class="img-main" alt="MS-Access">
+                        <img src="img/merise2.png" class="img-main" alt="MS-Access">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="iconn"><i class="fa-solid fa-gear"></i></div>
+                <div class="info">
+                    <h3>CMS</h3>
+                    <div class="sociale-ntz-icons">
+                        <a href="#" class="icon" id="cms"><i class="fa-brands fa-wordpress"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Projekte-->
+    <section class="Projekte" id="Projekte">
+        <h2 class="titel">Projekte</h2>  
+        <div class="content">
+            <div class="container">
+                <div class="fillter-btn">
+                    <button class="btn" data-filter="all">Alles</button>
+                    <button class="btn" data-filter=".web">Web</button>
+                    <button class="btn" data-filter=".desktop">Desktop</button>
+                    <button class="btn" data-filter=".cms">CMS</button>
+                </div>
+                <div class="Projekte-gallery">
+
+                    <div class="port-box mix web">
+                        <div class="port-img"><img src="img/portfolio.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>Portfolio</h3>
+                            <p>Ein Portfolio entwickelt von <span>HTML, CSS, JS</span>.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="port-box mix web">
+                        <div class="port-img"><img src="img/hochzeitapp.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>Hochzeitsmanagement</h3>
+                            <p>Webanwendung für die Hochzeitsverwaltung und den Versand von Hochzeitseinladungen <span>PHP, Bootstrap, MySQL</span>.</p>
+                        <a href="https://github.com/ikramZahran/Hochzeitsmanagement.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="port-box mix cms">
+                        <div class="port-img"><img src="img/E-Commerce-Website.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>E-Commerce-Website</h3>
+                            <p>Ein Online-Shop zum Verkauf der Produkte des Betriebs <span>WordPress</span>.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="port-box mix cms">
+                        <div class="port-img"><img src="img/Schaufensters Website.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>Schaufensters Website</h3>
+                            <p>Eine Schaufenster-Website für Betrieb und seine Produkte und Dienstleistungen <span>WordPress</span>.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="port-box mix cms">
+                        <div class="port-img"><img src="img/Schaufensterseite-shi.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>UML-Modellierung-Schaufensterseite</h3>
+                            <p>Eine repräsentative Website für die UML-Modellierungsanwendung, erstellt mit <span>WordPress</span></p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="port-box mix desktop">
+                        <div class="port-img"><img src="img/UML-Modellierung.png" alt=""></div>
+                        <div class="port-content">
+                            <h3>UML-Modellierung</h3>
+                            <p>Eine Desktop-Anwendung zur Modellierung-UML bietet : Klassendiagramme, Anwendungsfalldiagramme und Sequenzdiagramme zu erstellen <span>C#</span>.</p>
+                        <a href="https://github.com/ikramZahran/UML-Modellierung.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div> 
+    </section>
+
+    <!--In der Arbeit-->
+    <section class="arbeit" id="arbeit">
+        <h2 class="titel">In der <span> &nbsp; Arbeit</span></h2> 
+        <div class="content">
+            <p>Einige Fotos während des Praktikums.</p>
+            <!-- Photo Grid -->
+            <div class="row"> 
+                <div class="column">
+                    <img src="img/13.jpg" style="width:100%">
+                    <img src="img/3.jpg" style="width:100%">
+                    <img src="img/16.jpg" style="width:100%">
+                    
+                </div>
+                <div class="column">
+                    <img src="img/15.png" style="width:100%">
+                    <img src="img/27.jpg" style="width:100%">
+                </div>  
+                <div class="column">
+                    <img src="img/5.jpg" style="width:100%">
+                    <img src="img/33.jpg" style="width:100%">
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!--Kontakt   -->
+    <section class="Kontakt container" id="Kontakt">
+        <h2 class="titel">Kontakt</h2> 
+        <div class="blob"></div>
+        <div class="content">
+            <form action="" class="kontakt-form" id="kontakt-form">
+                <input type="text" name="name" id="" placeholder="Name" class="name" required>
+                <input type="email" name="email" id="" placeholder="E-mail..." class="email" required>
+                <textarea name="frage" cols="30" rows="10" id="" placeholder="Ihre Frage..." class="frage" required></textarea>
+                <input type="submit" value="Schicken >>>" class="schicken-btn">
+            </form>
+        </div>    
+    </section>
+    
+    <!--fichier email js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!--alert error-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("phU2XhEVuplNBlRnf");
+        })();
+    </script>
+
+    <!--fichier animation
+    
+        <div class="liquid">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#a29bfe">
+                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite" 
+                            values="M381.5,344.5Q359,439,260,422Q161,405,108,327.5Q55,250,101.5,162Q148,74,249,75.5Q350,77,377,163.5Q404,250,381.5,344.5Z;
+                            M377,332.5Q345,415,251,412.5Q157,410,84.5,330Q12,250,85.5,171Q159,92,258,78Q357,64,383,157Q409,250,377,332.5Z;
+                            M371.5,293Q352,336,318.5,391Q285,446,220,430Q155,414,117.5,363Q80,312,63,244Q46,176,92,116.5Q138,57,212,52.5Q286,48,310,114Q334,180,362.5,215Q391,250,371.5,293Z;
+                            M402.5,350Q365,450,245,458Q125,466,91,358Q57,250,95,149Q133,48,241.5,62Q350,76,395,163Q440,250,402.5,350Z;
+                            M395.5,316.5Q408,383,343.5,400Q279,417,209.5,429Q140,441,120,372.5Q100,304,104,251Q108,198,125,130Q142,62,210,75Q278,88,313.5,127.5Q349,167,366,208.5Q383,250,395.5,316.5Z;
+                            M401.5,327.5Q340,405,233.5,434Q127,463,92.5,356.5Q58,250,115.5,183Q173,116,253.5,110Q334,104,398.5,177Q463,250,401.5,327.5Z;
+                            M398,309Q390,368,334,388Q278,408,219,407Q160,406,139.5,352Q119,298,82.5,237Q46,176,98,126.5Q150,77,218,62Q286,47,333,94Q380,141,393,195.5Q406,250,398,309Z;
+                            M381.5,344.5Q359,439,260,422Q161,405,108,327.5Q55,250,101.5,162Q148,74,249,75.5Q350,77,377,163.5Q404,250,381.5,344.5Z;
+                            ">
+
+                        </animate>
+                    </path>
+                </svg>
+            </div>
+
+            <div class="home-img">
+            <div class="img-box">
+                <img src="img/ikram.jpg" alt="Image de zahran ikram">
+            </div>
+        </div>  
+
+    -->
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Zahran Ikram</span> 2024</p>
+        <div class="sociale-ntz-icons">
+            <a href="https://www.linkedin.com/in/zahran-ikram-0b8232224/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/ikramZahran" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://mail.google.com/mail/u/1/#inbox" class="icon"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.youtube.com/@hoffnungen.zahran" class="icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="Https://wa.me/+212674613321" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
