@@ -758,142 +758,183 @@ a:hover::after {
     color: #545BFF;
 }
 
-@media screen and (max-width: 768px) {
-    .header .navigation {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 50%;
-        background-color: #8a8dec;
-        z-index: 1;
+/* iPad Mini (768 x 1024 pixels)  */
+@media(max-width: 768px){
+    header{
+        padding: 12px 20px;
     }
 
-    .header .navigation.responsive {
-        display: grid;
+    .navigation{
+        padding-left: 10px;
     }
 
-    .header .navigation a {
-        padding: 10px;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .header .menu-icon {
-        display: none;
-    }
-
-    .header .navigation {
-        display: grid;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .navigation {
-        display: none;
-    }
-
-    .navigation a{
-        display: grid;
-    }
-
-    .menu-icon {
-        display: flex;
-    }
-
-    .menu-icon .fa-bars {
-        font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+    .logo{
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        letter-spacing: 0.6px;
+        margin-right: 10%;
     }
 
     .main {
-        padding-top: 90px;
         display: grid;
+        margin-top: auto;
+        margin-bottom: -20%;
+    }
+
+    .introduction{
+        margin-top: -10%;
     }
     
     .block-img {
         height: 260px;/* Ajustez la hauteur pour les écrans plus petits */
         width: 200px;
-        height: 200px;
         min-height: 300px;
         min-width: 10%;
+        margin-left: 20%;
+        margin-top: -50%;
+        margin-bottom: 20%;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .main {
-        padding: 10px;
+    .main h2{
+        font-size: 1.3em;
+    }
+
+    .main p{
+        font-size: 1em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content p{
+        font-size: 1.2em;
+    }
+
+    .about-us p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .port-content h3{
+        font-size: 1.3rem;
+        font-weight: 500;
     }
     
-    .block-img {
-        height: 150px; /* Ajustez la hauteur pour les écrans encore plus petits */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header {
-        width: auto;
+    .port-content p{
+        font-size: .7rem;
+        margin: 2px 0 10px 0;
+        font-weight: 400;
     }
 
     .content .container {
         display: grid;
-        text-align: left;
+        margin-right: 25%;
+    }
+    
+    section{
+        padding: 12px 50px;
+    }
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+       -ms-flex: 50%;
+       flex: 50%;
+       max-width: 50%;
+    }
+ }
+   
+ /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 600px) {
+    .column {
+       -ms-flex: 100%;
+       flex: 100%;
+       max-width: 100%;
+    }
+ }
+ 
+ @media screen and (max-width: 900px) {
+    .navigation {
+       display: none;
+       position: absolute;
+       top: 3.7rem;
+       align-items: right;
+       width: 30%;
+       background-color: #545BFF;
+       text-align: center;
+    }
+   
+    .navigation.responsive {
+       display: block;
+    }
+   
+    .navigation a {
+       display: block;
+       color: #fff;
+       padding: 10px;
+    }
+ 
+    .navigation a:hover {
+         color: #fff;
+         font-weight: 700;
+       }
+   
+    .menu-icon {
+       display: block;
+       z-index: 1;
+    }
+ 
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .titel{
+        margin-top: 10%;
+    }
+
+    .content .container {
+        display: grid;
+        margin-left: 20%;
     }
 
     .ubermich-img img {
         align-items: center;
         height: 200px; /* Ajustez la hauteur pour les écrans encore plus petits */
-        width: 210px;
-        margin-left: 35%;
-        margin-top: 30px;
+        width: 200px;
+        margin-top: 32px;
     }
 
-    .description{
-        align-items: center;
-        height: 270px; /* Ajustez la hauteur pour les écrans encore plus petits */
-        width: 700px;
-        margin-left: 20%;
-        margin-bottom: 30px;
+    .port-content h3{
+        font-size: 1rem;
+        font-weight: 450;
     }
-
-    .fertigkeiten{
-        display: grid;
-    }
-
-    .fertigkeiten .fertig1, .fertigkeiten .fertig2{
-        margin-bottom: 10px;        
-    }
-
-    .about-us p {
-        font-size: 14px;
+    
+    .port-content p{
+        font-size: .7rem;
+        margin: 2px 0 10px 0;
         font-weight: 400;
     }
 
-    .about-us {
-        padding-bottom: 50%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .content .container  {
-        padding: 10px;
-    }
-    
-    .ubermich-img {
-        align-items: center;
-        height: 230px; /* Ajustez la hauteur pour les écrans encore plus petits */
-        width: 680px;
-        margin-left: 10%;
-        margin-bottom: 20px;   
+    .Projekte .container {
+        display: grid;
     }
 
-    .about-us .description {
-        max-width: 20%;
+    .Projekte {
+        padding-right: 50%;
     }
 
-    .about-us p {
-        font-size: 13px;
-        font-weight: 350;
+    .Projekte .titel{
+        padding-left: 110%;
     }
-}
+
+    .kontakt-form input, .kontakt-form textarea {
+        font-size: 0.7rem;
+        font-weight: 500;
+        padding: 12px;
+    }
+ }

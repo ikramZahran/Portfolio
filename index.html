@@ -39,8 +39,10 @@
             // Fonction pour masquer le menu après avoir cliqué sur un élément du menu
             document.querySelectorAll(".navigation a").forEach(function(element) {
                 element.addEventListener("click", function() {
-                    var navigation = document.getElementById("navigationB");
-                    navigation.style.display = "none";
+                    if (window.innerWidth <= 800) {
+                        var navigation = document.getElementById("navigationB");
+                        navigation.style.display = "none";
+                    }
                 });
             });
         </script>
@@ -60,11 +62,11 @@
             <a href="#" class="main-btn-video"><i class="fa-solid fa-play"></i></a>
             -->
             <div class="sociale-ntz-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/zahran-ikram-0b8232224/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ikramZahran" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://mail.google.com/mail/u/1/#inbox" class="icon"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.youtube.com/@hoffnungen.zahran" class="icon"><i class="fa-brands fa-youtube"></i></a>
+                <a href="Https://wa.me/+212674613321" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -260,20 +262,15 @@
                         <div class="contenets">
                             <div class="box">
                                 <div class="year"><i class="fa-regular fa-calendar-days"></i> 01 April 2022 - 01 Juli 2022</div>
-                                <h3>Webanwendung für die Einkaufsverwaltung.</h3>
+                                <h3>UML-Modellierung.</h3>
                                 <p class="fade-in">
                                     <ul class="praktkum">
                                         <li>Praktikum bei der Firma Innov DS in FES.</li>
-                                        <li>Frontend-Technologie : 
-                                            <li class="ft">ReactJS</li>
-                                            <li class="ft">NextJs</li>
-                                            <li class="ft">TypeScript</li>
-                                            <li class="ft">Tailwind</li>
+                                        <li>Desktop-Anwendung zur Modellierung-UML : 
+                                            <li class="ft">C#.</li>
                                         </li>
-                                        <li>Backend-Technologie :
-                                            <li class="ft">Spring Boot</li>
-                                            <li class="ft">Hibernate</li>
-                                            <li class="ft">Datenbank PostgreSQL</li>
+                                        <li>Eine repräsentative Website für die UML-Modellierungsanwendung :
+                                            <li class="ft">WordPress</li>
                                         </li>
                                     </ul>
                                 </p>
@@ -392,7 +389,7 @@
                         <div class="port-content">
                             <h3>Hochzeitsmanagement</h3>
                             <p>Webanwendung für die Hochzeitsverwaltung und den Versand von Hochzeitseinladungen <span>PHP, Bootstrap, MySQL</span>.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/ikramZahran/Hochzeitsmanagement.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
 
@@ -428,7 +425,7 @@
                         <div class="port-content">
                             <h3>UML-Modellierung</h3>
                             <p>Eine Desktop-Anwendung zur Modellierung-UML bietet : Klassendiagramme, Anwendungsfalldiagramme und Sequenzdiagramme zu erstellen <span>C#</span>.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/ikramZahran/UML-Modellierung.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
@@ -521,11 +518,11 @@
     <footer class="footer">
         <p class="footer-title">Copyrights @ <span>Zahran Ikram</span> 2024</p>
         <div class="sociale-ntz-icons">
-            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="icon"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/zahran-ikram-0b8232224/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/ikramZahran" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://mail.google.com/mail/u/1/#inbox" class="icon"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.youtube.com/@hoffnungen.zahran" class="icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="Https://wa.me/+212674613321" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </footer>
 </body>
