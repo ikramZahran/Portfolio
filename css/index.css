@@ -570,7 +570,7 @@ a:hover::after {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: linear-gradient(rgba(0,0,0,.2), #272dd6);
+    background: linear-gradient(rgba(0,0,0,.2), #000473);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -589,8 +589,8 @@ a:hover::after {
 }
 
 .port-content h3{
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: #fff;
     font-weight: 700;
 }
