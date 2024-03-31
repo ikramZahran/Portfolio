@@ -56,7 +56,7 @@
             <p class="fade-in">Guten Tag, ich bin</p>
             <h2 class="fade-in">Zahran Ikram <span id="text"></span></h2>
             <p class="fade-in">Ich verfüge über unterschiedliche Fähigkeiten in der Web- und Anwendungsentwicklung.</p>
-            <a href="#projte" class="main-btn">Bewerbung</a>
+            <a href="#projte" onclick="telechargerPDF()" class="main-btn">Bewerbung</a>
             <!-- 
             <a href="#projte" class="main-btn">Video abspielen</a>
             <a href="#" class="main-btn-video"><i class="fa-solid fa-play"></i></a>
@@ -94,6 +94,26 @@
                 window.addEventListener("resize", checkElementsInView);
                 checkElementsInView();
             });
+        </script>
+
+        <script>
+            function telechargerPDF() {
+            // Chemin vers votre fichier PDF
+            var cheminPDF = 'img/Zahran Ikram-Bewerbung  Als Fachinformatikerin .pdf';
+        
+            // Créez un élément 'a' temporaire pour déclencher le téléchargement
+            var lienTelechargement = document.createElement('a');
+            lienTelechargement.href = cheminPDF;
+            lienTelechargement.download = 'Zahran Ikram-Bewerbung  Als Fachinformatikerin .pdf';
+            
+            // Ajoutez l'élément 'a' au DOM pour déclencher le téléchargement
+            document.body.appendChild(lienTelechargement);
+            lienTelechargement.click();
+            //le fait de supprimer l'élément du DOM après avoir déclenché le téléchargement
+            // ne soit pas strictement nécessaire, cela peut contribuer à maintenir une structure 
+            //de DOM propre et à éviter toute confusion pour les utilisateurs ou les développeurs.
+            document.body.removeChild(lienTelechargement);
+            }
         </script>
         <div class="block-img"></div>              
     </section>
@@ -380,7 +400,7 @@
                         <div class="port-content">
                             <h3>Portfolio</h3>
                             <p>Ein Portfolio entwickelt von <span>HTML, CSS, JS</span>.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://ikramzahran.github.io/Portfolio/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
 
